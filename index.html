@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POS System</title>
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/navbar_styles.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #section_home>div {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("assets/image/3707783.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/image/logo.jpg" alt="Logo" class="logo-img"> Shop POS System
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-cus">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-item">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-order">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--home-->
+<div class="container" id="section_home">
+    <div></div>
+</div>
+
+<!--customer-->
+<div class="container" id="section_customer">
+    <h1 class="text-center text-white">Customer</h1>
+    <div class="card" id="card_id">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-success mb-3" type="button">View All Customers</button>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Customer Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Contact</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button class="btn btn-danger" type="button">+ Add</button>
+            <button class="btn btn-warning" type="button">Update/Delete</button>
+        </div>
+    </div>
+</div>
+
+<!--item-->
+<div class="container" id="section_item">
+    <h1 class="text-center text-white">Item</h1>
+    <div class="card" id="item_card_id">
+        <div class="card-body">
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+
+            <button class="btn btn-success mb-3" type="button">View All Items</button>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Item Id</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <button class="btn btn-danger" type="button">+ Add</button>
+            <button class="btn btn-warning" type="button">Update/Delete</button>
+        </div>
+    </div>
+</div>
+
+<!--order-->
+<div class="container" id="section_order">
+    <h1 class="text-center text-white">Order</h1>
+    <div class="card" id="order_card_id">
+        <div class="card-body">
+            <div class="card" id="order_card_id_2">
+                <div class="card-body">
+                    <!-- Text Field 1 -->
+                    <div class="form-group">
+                        <label for="text1">Order Id</label>
+                        <input type="text" class="form-control" id="text1" placeholder="">
+                    </div>
+
+                    <!-- Text Field 2 -->
+                    <div class="form-group">
+                        <label for="text2">Customer Id</label>
+                        <input type="text" class="form-control" id="text2" placeholder="">
+                    </div>
+
+                    <!-- Text Field 3 -->
+                    <div class="form-group">
+                        <label for="text3">Customer Name</label>
+                        <input type="text" class="form-control" id="text3" placeholder="">
+                    </div>
+
+                    <!-- Text Field 4 -->
+                    <div class="form-group">
+                        <label for="text4">Date</label>
+                        <input type="text" class="form-control" id="text4" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="total">Total:</label>
+                        <input type="text" class="form-control" id="total" readonly>
+                    </div>
+
+                    <!-- Text Field 5 -->
+                    <div class="form-group">
+                        <label for="text5">Cash</label>
+                        <input type="text" class="form-control" id="text5" placeholder="">
+                    </div>
+
+                    <!-- Text Field 6 -->
+                    <div class="form-group">
+                        <label for="text6">Balance</label>
+                        <input type="text" class="form-control" id="text6" placeholder="">
+                    </div>
+                    <!-- Card content goes here -->
+                </div>
+            </div>
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-success mb-3" type="button">View All Items</button>
+
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Item Id</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button class="btn btn-danger" type="button">+ Add</button>
+            <button class="btn btn-warning" type="button">Update/Delete</button>
+
+        </div>
+    </div>
+</div>
+
+<script src="assets/lib/jquery.min.js"></script>
+<script src="assets/bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script>
+    $("#nav-home").on('click', () => {
+        $("#section_customer").css('display','none');
+        $("#section_item").css('display','none');
+        $("#section_order").css('display','none');
+        $("#section_home").css('display','block');
+    });
+    $("#nav-cus").on('click', () => {
+        $("#section_item").css('display','none');
+        $("#section_order").css('display','none');
+        $("#section_home").css('display','none');
+        $("#section_customer").css('display','block');
+    });
+    $("#nav-item").on('click', () => {
+        $("#section_customer").css('display','none');
+        $("#section_order").css('display','none');
+        $("#section_home").css('display','none');
+        $("#section_item").css('display','block');
+    });
+    $("#nav-order").on('click', () => {
+        $("#section_customer").css('display','none');
+        $("#section_item").css('display','none');
+        $("#section_home").css('display','none');
+        $("#section_order").css('display','block');
+    });
+
+    $("#nav-home").click();
+
+</script>
+</body>
+</html>
